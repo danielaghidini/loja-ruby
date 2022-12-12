@@ -1,6 +1,6 @@
        
         <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
+            <div class="col-12">
             <% @produto.errors.full_messages.each do |msg| %>
                 <div class="alert alert-danger" role="alert">
                     <%= msg %>
@@ -15,9 +15,13 @@
                         <%= form.label :nome %>
                         <%= form.text_field :nome, class:"form-control" %>
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         <%= form.label :descricao %>
                         <%= form.text_area :descricao, class:"form-control", rows:4 %>
+                    </div>
+                    <div class="form-group">
+                        <%= form.label :departamento %>
+                        <%= form.collection_select :departamento_id, @departamentos, :id, :nome, {},class:"form-control"%>
                     </div>
                      <div class="form-group">
                         <%= form.label :preco %>
