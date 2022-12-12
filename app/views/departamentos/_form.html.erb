@@ -10,13 +10,12 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :nome, style: "display: block" %>
-    <%= form.text_field :nome %>
+<div class="form-inline">
+<%= form.label :nome %>
+  <div class="form-group">
+    <%= form.text_field :nome, class:"form-control" %>
+    <%= form.submit "Salvar", class:"btn btn-success" %>
   </div>
+</div>
 
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

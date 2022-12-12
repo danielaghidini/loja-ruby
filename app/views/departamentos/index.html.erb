@@ -1,11 +1,11 @@
         <div class="row">
-            <div class="col-12">
+            <div class="col-sm-12">
                 <h3 class="lead">Departamentos</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-            <p id="notice"><%= notice %></p>
+            <div class="col-sm-12">
+
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -17,9 +17,9 @@
                         <% @departamentos.each do |departamento| %>
                             <tr>
                                 <td><%= departamento.nome %></td>
-                                <td><%= link_to 'Mostrar', departamento, class:"btn btn-link" %></td>
-                                <td><%= link_to 'Editar', edit_departamento_path(departamento), class:"btn btn-link" %></td>
-                                <td><%= button_to "Remover", departamento, method: :delete, class:"btn btn-link", data: {confirm: "Tem certeza que deseja remover o departamento #{departamento.nome}?"} %></td>
+                                <td><%= link_to 'Ver Produtos', departamento, class:"btn btn-default" %></td>
+                                <td><%= link_to 'Editar', edit_departamento_path(departamento), class:"btn btn-default" %></td>
+                                <td><%= button_to "Deletar", departamento, method: :delete, class:"btn btn-default", data: {confirm: "Tem certeza que deseja deletar o departamento #{departamento.nome}?"} %></td>
                             </tr>
                         <% end %>
                     </tbody>
@@ -27,7 +27,7 @@
             </div>
         </div>
          <div class="row">
-            <div class="col-12">
+            <div class="col-sm-12">
                 <%= link_to "Novo Departamento", new_departamento_path, class:"btn btn-success pull-right" %>
             </div>
         </div>

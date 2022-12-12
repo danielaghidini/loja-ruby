@@ -1,9 +1,8 @@
             <div class="row">
-                <div class="col-12">
+                <div class="col-sm-12">
 
                     <h3 class="lead">Produtos</h3>
 
-                
                     <% if flash[:notice] %>
                         <div class="alert alert-success" role="alert">
                             <%= flash[:notice] %>
@@ -22,23 +21,13 @@
                         </tr>
                     </thead>
                     <tbody>          
-                    <% @produtos.each do |produto| %>
-                        <tr>
-                            <td><%= produto.nome %></td>
-                            <td><%= produto.descricao %></td>
-                            <td><%= produto.departamento.nome %></td>
-                            <td><%= produto.preco %></td>
-                            <td><%= produto.quantidade %></td>
-                            <td><%= button_to "Remover", produto, method: :delete, class:"btn btn-danger", data: {confirm: "Tem certeza que deseja remover o produto #{produto.nome}?"} %></td>
-                            <td><%= link_to "Alterar", edit_produto_path(produto), class:"btn btn-default" %></td>
-                        </tr>
-                    <% end %>
+                        <%= render @produtos %>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-sm-12">
                 <h3 class="lead">Produtos com Desconto</h3>
                 
                 <table class="table table-bordered table-hover">
@@ -53,17 +42,7 @@
                         </tr>
                     </thead>
                     <tbody>          
-                    <% @produto_com_desconto.each do |produto| %>
-                        <tr>
-                            <td><%= produto.nome %></td>
-                            <td><%= produto.descricao %></td>
-                            <td><%= produto.departamento.nome %></td>
-                            <td><%= produto.preco %></td>
-                            <td><%= produto.quantidade %></td>
-                            <td><%= button_to "Remover", produto, method: :delete, class:"btn btn-danger", data: {confirm: "Tem certeza que deseja remover o produto #{produto.nome}?"} %></td>
-                            <td><%= button_to "Alterar", produto, class:"btn btn-default" %></td>
-                        </tr>
-                    <% end %>
+                        <%= render @produto_com_desconto %>
                     </tbody>
                 </table>
                 </div>

@@ -1,10 +1,29 @@
-<p style="color: green"><%= notice %></p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="lead">Produtos</h3>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Departamento</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th colspan=1></th>
+                            </tr>
+                        </thead>
+                        <tbody>          
+                            <%= render @produtos_por_departamento %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <%= link_to "Editar Departamento", edit_departamento_path(@departamento), class:"btn btn-default" %> |
+                    <%= link_to "Voltar", departamentos_path, class:"btn btn-default" %>
+                </div>
+            </div>
 
-<%= render @departamento %>
 
-<div>
-  <%= link_to "Edit this departamento", edit_departamento_path(@departamento) %> |
-  <%= link_to "Back to departamentos", departamentos_path %>
 
-  <%= button_to "Destroy this departamento", @departamento, method: :delete %>
-</div>

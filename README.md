@@ -1,4 +1,4 @@
-# README
+# Loja com Ruby on Rails
 
 Este projeto é uma loja simples feita com Ruby on Rails no curso da Alura.
 Inclui CRUD, categorias, validação de campos e localização para pt-BR.
