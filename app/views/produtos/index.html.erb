@@ -1,8 +1,8 @@
             <div class="row">
                 <div class="col-12">
-                <div class="alert alert-success" role=""alert>
-                    <h3 class="alert-heading">Produtos</h3>
-                </div>
+
+                    <h3 class="lead">Produtos</h3>
+
                 
                     <% if flash[:notice] %>
                         <div class="alert alert-success" role="alert">
@@ -15,6 +15,7 @@
                         <tr>
                             <th>Nome</th>
                             <th>Descrição</th>
+                            <th>Departamento</th>
                             <th>Preço</th>
                             <th>Quantidade</th>
                             <th colspan=1></th>
@@ -25,21 +26,27 @@
                         <tr>
                             <td><%= produto.nome %></td>
                             <td><%= produto.descricao %></td>
+                            <td><%= produto.departamento.nome %></td>
                             <td><%= produto.preco %></td>
                             <td><%= produto.quantidade %></td>
                             <td><%= button_to "Remover", produto, method: :delete, class:"btn btn-danger", data: {confirm: "Tem certeza que deseja remover o produto #{produto.nome}?"} %></td>
+                            <td><%= link_to "Alterar", edit_produto_path(produto), class:"btn btn-default" %></td>
                         </tr>
                     <% end %>
                     </tbody>
                 </table>
-                <div class="alert alert-success" role=""alert>
-                    <h3 class="alert-heading">Produtos com Desconto</h3>
-                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="lead">Produtos com Desconto</h3>
+                
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th>Nome</th>
                             <th>Descrição</th>
+                            <th>Departamento</th>
                             <th>Preço</th>
                             <th>Quantidade</th>
                             <th colspan=1></th>
@@ -50,9 +57,11 @@
                         <tr>
                             <td><%= produto.nome %></td>
                             <td><%= produto.descricao %></td>
+                            <td><%= produto.departamento.nome %></td>
                             <td><%= produto.preco %></td>
                             <td><%= produto.quantidade %></td>
                             <td><%= button_to "Remover", produto, method: :delete, class:"btn btn-danger", data: {confirm: "Tem certeza que deseja remover o produto #{produto.nome}?"} %></td>
+                            <td><%= button_to "Alterar", produto, class:"btn btn-default" %></td>
                         </tr>
                     <% end %>
                     </tbody>

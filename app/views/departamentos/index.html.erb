@@ -1,8 +1,6 @@
         <div class="row">
             <div class="col-12">
-                <div class="alert alert-success" role=""alert>
-                    <h3 class="alert-heading">Departamentos</h3>
-                </div>
+                <h3 class="lead">Departamentos</h3>
             </div>
         </div>
         <div class="row">
@@ -21,7 +19,7 @@
                                 <td><%= departamento.nome %></td>
                                 <td><%= link_to 'Mostrar', departamento, class:"btn btn-link" %></td>
                                 <td><%= link_to 'Editar', edit_departamento_path(departamento), class:"btn btn-link" %></td>
-                                <td><%= button_to "Remover", departamento, method: :delete, class:"btn btn-link", data: {confirm: "Tem certeza que deseja remover o produto #{departamento.nome}?"} %></td>
+                                <td><%= button_to "Remover", departamento, method: :delete, class:"btn btn-link", data: {confirm: "Tem certeza que deseja remover o departamento #{departamento.nome}?"} %></td>
                             </tr>
                         <% end %>
                     </tbody>
