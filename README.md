@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este projeto é uma loja simples feita com Ruby on Rails no curso da Alura.
+Inclui CRUD, categorias, validação de campos e localização para pt-BR.
 
-Things you may want to cover:
+* Instale as Gems com:
+$ bundle install
 
-* Ruby version
+* Inicie o server com:
+$ rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Versões:
+ - Ruby: 2.7.7
+ - Ruby on Rails: 7.0.4
