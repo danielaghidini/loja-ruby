@@ -3,6 +3,13 @@
                 <div class="alert alert-success" role=""alert>
                     <h3 class="alert-heading">Produtos</h3>
                 </div>
+                
+                    <% if flash[:notice] %>
+                        <div class="alert alert-success" role="alert">
+                            <%= flash[:notice] %>
+                        </div>
+                    <% end %>
+                
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>

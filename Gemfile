@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.7"
 
-gem "twitter-bootstrap-rails"
+gem 'rails-i18n', '~> 7.0.4' #Centralization of locale data collection
+
+gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 
